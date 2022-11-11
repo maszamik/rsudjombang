@@ -5,7 +5,7 @@
     include_once 'libraries/contrib/Google_Oauth2Service.php';
     $client_id = '61700418827-bgvavstvaqto639p5bv2emh5695rh7aq.apps.googleusercontent.com'; // Google client ID
     $client_secret = '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'; // Google Client Secret
-    $redirect_url = 'http://tesgoogledisty.kamunaenya.my.id/distyfix/google.php'; // Callback URL
+    $redirect_url = 'http://tesgoogledisty.kamunaenya.my.id/google.php'; // Callback URL
     // Call Google API
     $gclient = new Google_Client();
     $gclient->setApplicationName('Google Login'); // Set dengan Nama Aplikasi Kalian
