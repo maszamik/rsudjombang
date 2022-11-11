@@ -2,8 +2,7 @@
 // Include file gpconfig
     include_once 'gpconfig.php';
     include_once 'google.php';
-    include_once 'Google_Client.php';
-
+    
     if(isset($_GET['code'])){
         $gclient->authenticate($_GET['code']);
         $_SESSION['token'] = $gclient->getAccessToken();
