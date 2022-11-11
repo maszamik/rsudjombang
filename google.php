@@ -1,28 +1,29 @@
 <?php
 // Include file gpconfig
-    include_once 'gpconfig.php';
-    include_once 'google.php';
-    
-    if(isset($_GET['code'])){
-        $gclient->authenticate($_GET['code']);
-        $_SESSION['token'] = $gclient->getAccessToken();
-        header('Location: ' . filter_var($redirect_url, FILTER_SANITIZE_URL));
-    }
-    if (isset($_SESSION['token'])) {
-        $gclient->setAccessToken($_SESSION['token']);
-    }
-    if ($gclient->getAccessToken()) {
-        include 'koneksi.php';
+include_once 'gpconfig.php';
+
+if(isset($_GET['code'])){
+    $gclient->authenticate($_GET['code']);
+    $_SESSION['token'] = $gclient->getAccessToken();
+    header('Location: ' . filter_var($redirect_url, FILTER_SANITIZE_URL));
+}
+
+if (isset($_SESSION['token'])) {
+    $gclient->setAccessToken($_SESSION['token']);
+}
+
+if ($gclient->getAccessToken()) {
+    include 'koneksi.php';
     // Get user profile data from google
-        $gpuserprofile = $google_oauthv2->userinfo->get();
-        $nama = $gpuserprofile['given_name']." ".$gpuserprofile['family_name']; // Ambil nama dari Akun Google
-        $email = $gpuserprofile['email']; // Ambil email Akun Google nya
-        // Buat query untuk mengecek apakah data user dengan email tersebut sudah ada atau belum
-        // Jika ada, ambil id, username, dan nama dari user tersebut
-        $sql = $pdo->prepare("SELECT user_id, nama_lengkap FROM user WHERE username=:a");
-        $sql->bindParam(':a', $email);
-        $sql->execute(); // Eksekusi querynya
-        $user = $sql->fetch(); // Ambil datanya dari hasil query tadi
+    $gpuserprofile = $google_oauthv2->userinfo->get();
+    $nama = $gpuserprofile['given_name']." ".$gpuserprofile['family_name']; // Ambil nama dari Akun Google
+    $email = $gpuserprofile['email']; // Ambil email Akun Google nya
+    // Buat query untuk mengecek apakah data user dengan email tersebut sudah ada atau belum
+    // Jika ada, ambil id, username, dan nama dari user tersebut
+    $sql = $pdo->prepare("SELECT user_id, nama_lengkap FROM user WHERE username=:a");
+    $sql->bindParam(':a', $email);
+    $sql->execute(); // Eksekusi querynya
+    $user = $sql->fetch(); // Ambil datanya dari hasil query tadi
     if(empty($user)){ // Jika User dengan email tersebut belum ada
         // Ambil username dari kata sebelum simbol @ pada email
         $ex = explode('@', $email); // Pisahkan berdasarkan "@"
@@ -42,10 +43,10 @@
     $_SESSION['user_id'] = $user_id;
     // $_SESSION['username'] = $username;
     $_SESSION['nama_lengkap'] = $nama;
-        $_SESSION['username'] = $email;
-        header("location: admin.php");
-    } else {
+    $_SESSION['username'] = $email;
+    header("location: admin.php");
+} else {
     $authUrl = $gclient->createAuthUrl();
-    header("location: ".$authUrl);
-    }
+    header("location: " .$authUrl);
+}
 ?>
