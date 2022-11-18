@@ -36,9 +36,6 @@
                         <div class="form-group text-center">
                             <button type="submit" name="submit" class="btn btn-primary account-btn">Login</button>
                         </div>
-                        <div class="text-center">
-                            <a href="google.php" class="btn btn-danger"><i class="fa fa-google"></i>  GOOGLE</a>
-                        </div>
                       </form>
                 </div>
             </div>
