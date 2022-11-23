@@ -30,12 +30,12 @@
                                 <li>
                                     <a href="admin_table_poli.php">List Poli</a>
                                 </li>
-								<!-- <li>
-                                    <a href="form-elements.php">Faramasi</a>
+                                <li>
+                                    <a href="admin_table_dokter.php">List Dokter</a>
                                 </li>
                                 <li>
-                                    <a href="form-layouts.php">Member</a>
-                                </li> -->
+                                    <a href="admin_table_obat.php">List Obat</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -50,7 +50,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="admin_jadwal_table.php">Konsultasi</a>
+                                    <a href="admin_table_konsultasi.php">Konsultasi</a>
                                 </li>
                                 <li>
                                     <a href="admin_penjualan_obat.php">Penjualan Obat</a>

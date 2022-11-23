@@ -111,9 +111,11 @@
                                                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#hasilkonsul<?php echo $row['poli_id'];?>">
                                                     <i class="anticon anticon-edit"></i>
                                                 </button>
-                                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hasilkonsul<?php echo $row['poli_id'];?>">
-                                                    <i class="anticon anticon-delete"></i>
-                                                </button>
+                                                <a href='delete_poli.php?id=<?php echo $row['poli_id'];?>'>
+                                                    <button type="button" class="btn btn-danger">
+                                                        <i class="anticon anticon-delete"></i>
+                                                    </button>
+                                                </a>
 
                                                 <!-- Edit Modal START -->
                                                 <div class="modal fade" id="hasilkonsul<?php echo $row['poli_id'];?>" role="dialog" aria-labelledby="hasilkonsulLabel" aria-hidden="true">

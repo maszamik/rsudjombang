@@ -40,23 +40,62 @@
                         <div class="header-sub-title">
                             <nav class="breadcrumb breadcrumb-dash">
                                 <a href="#" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home</a>
-                                <a class="breadcrumb-item" href="#">List User</a>
-                                <span class="breadcrumb-item active">Admin</span>
+                                <a class="breadcrumb-item" href="#">Master Data</a>
+                                <span class="breadcrumb-item active">List Obat</span>
                             </nav>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <div class="overlay">
-
-                            </div> 
-
-                            <h4>List User</h4>
+                            <h4>List Obat</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas accumsan lacus vel facilisis volutpat est velit. Arcu odio ut sem nulla pharetra diam sit amet nisl. In fermentum et sollicitudin ac orci phasellus. Viverra accumsan in nisl nisi scelerisque eu. Urna molestie at elementum eu facilisis sed. Tempus egestas sed sed risus. Vel facilisis volutpat est velit egestas. Consectetur adipiscing elit ut aliquam purus sit amet. Sit amet nisl suscipit adipiscing bibendum est. Ut ornare lectus sit amet. Nunc id cursus metus aliquam eleifend mi in nulla posuere. Ante in nibh mauris cursus mattis molestie a iaculis at. Consequat mauris nunc congue nisi vitae suscipit tellus. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi.</p>
+                            <button type="button" name="add" id="submit" class="btn btn-primary"
+                                    data-toggle="modal" data-target="#tambahobat">
+                                    + Tambahkan Obat
+                            </button>
+                            <!-- ADD Modal START -->
+                            <div class="modal fade" id="tambahobat" role="dialog"
+                                aria-labelledby="hasilkonsulLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="hasilkonsulLabel">Tambah Obat</h5>
+                                            <button type="button" class="close"
+                                                data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form method="POST" action="add_obat.php">
+                                                <div class="form-group">
+                                                    <div class="form-group">
+                                                        <label for="formGroupExampleInput">Nama obat:</label>
+                                                        <input type="text" class="form-control" name="nama_obat">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="formGroupExampleInput">Jenis Obat:</label>
+                                                        <input type="text" class="form-control" name="jenis_obat">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="formGroupExampleInput">Jumlah:</label>
+                                                        <input type="text" class="form-control" name="qty">
+                                                    </div>
+                                                    <label for="formGroupExampleInput">Harga Obat:</label>
+                                                        <input type="text" class="form-control" name="harga_obat">
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-success" type="submit" name="submit">Add</button>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- ADD Modal END -->
                             <div class="m-t-25">
                                 <?php
-                                    $sql = "SELECT * FROM user AS r
-                                    LEFT JOIN user_level AS ul ON r.user_level_id = ul.user_level_id";
+                                    $sql = "SELECT * FROM obat";
                                     $result = $conn -> query($sql);
 
                                     if (mysqli_num_rows($result) > 0) {
@@ -65,10 +104,10 @@
                                     <thead>
                                          <tr>
                                             <th>No</th>
-                                            <th>Jabatan</th>
-                                            <th>Username</th>
-                                            <th>Password</th>
-                                            <th>Nama Lengkap</th>
+                                            <th>Nama Obat</th>
+                                            <th>Jenis Obat</th>
+                                            <th>Stok</th>
+                                            <th>Harga Obat</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -77,23 +116,24 @@
                                             $i=1;
                                             while($row = mysqli_fetch_array($result)) {
                                         ?>
-                                        <tr id="<?php echo $row['user_id'];?>">
+                                        <tr id="<?php echo $row['obat_id'];?>">
                                             <td><?php echo $i; ?></td>
-                                            <td><?php echo $row["role"]; ?></td>
-                                            <td><?php echo $row["username"]; ?></td>
-                                            <td><?php echo $row["password"]; ?></td>
-                                            <td><?php echo $row["nama_lengkap"]; ?></td>
+                                            <td><?php echo $row["nama_obat"]; ?></td>
+                                            <td><?php echo $row["jenis_obat"]; ?></td>
+                                            <td><?php echo $row["qty"]; ?></td>
+                                            <td><?php echo $row["harga_obat"]; ?></td>
                                             <td>
-                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#hasilkonsul<?php echo $row['user_id'];?>">
+                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#hasilkonsul<?php echo $row['obat_id'];?>">
                                                     <i class="anticon anticon-edit"></i>
                                                 </button>
-                                                <a href='delete.php?id=<?php echo $row['user_id'];?>'>
+                                                <a href='delete_obat.php?id=<?php echo $row['obat_id'];?>'>
                                                     <button type="button" class="btn btn-danger">
                                                         <i class="anticon anticon-delete"></i>
                                                     </button>
                                                 </a>
+
                                                 <!-- Edit Modal START -->
-                                                <div class="modal fade" id="hasilkonsul<?php echo $row['user_id'];?>" role="dialog" aria-labelledby="hasilkonsulLabel" aria-hidden="true">
+                                                <div class="modal fade" id="hasilkonsul<?php echo $row['obat_id'];?>" role="dialog" aria-labelledby="hasilkonsulLabel" aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
@@ -104,22 +144,22 @@
                                                                 </button>
                                                             </div>
                                                             <div class="modal-body">
-                                                            <form method="POST" action="update.php?id=<?php echo $row['user_id']; ?>">
+                                                            <form method="POST" action="update_obat.php?id=<?php echo $row['obat_id']; ?>">
                                                                 <div class="form-group">
-                                                                    <label for="formGroupExampleInput">Username:</label>
-                                                                    <input type="text" class="form-control" value="<?php echo $row['username']; ?>" name="username">
+                                                                    <label for="formGroupExampleInput">Nama Obat:</label>
+                                                                    <input type="text" class="form-control" value="<?php echo $row['nama_obat']; ?>" name="nama_obat">
                                                                     </div>
                                                                 <div class="form-group">
-                                                                    <label for="formGroupExampleInput">Password:</label>
-                                                                    <input type="text" class="form-control" value="<?php echo $row['password']; ?>" name="password">
+                                                                    <label for="formGroupExampleInput">Jenis Obat:</label>
+                                                                    <input type="text" class="form-control" value="<?php echo $row['jenis_obat']; ?>" name="jenis_obat">
                                                                     </div>
                                                                 <div class="form-group">
-                                                                    <label for="formGroupExampleInput">Nama Lengkap:</label>
-                                                                    <input type="text" class="form-control" value="<?php echo $row['nama_lengkap']; ?>" name="nama_lengkap">
+                                                                    <label for="formGroupExampleInput">Stok:</label>
+                                                                    <input type="text" class="form-control" value="<?php echo $row['qty']; ?>" name="qty">
                                                                     </div>
                                                                 <div class="form-group">
-                                                                    <label for="formGroupExampleInput">Jabatan:</label>
-                                                                    <input type="text" class="form-control" value="<?php echo $row['role']; ?>" name="role">
+                                                                    <label for="formGroupExampleInput">Harga Obat:</label>
+                                                                    <input type="text" class="form-control" value="<?php echo $row['harga_obat']; ?>" name="harga_obat">
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
