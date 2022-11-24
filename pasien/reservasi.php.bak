@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RSUD JOMBANG - Homepage Telemedicine</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/logo/RSUD2.png">
+
+    <!-- page css -->
+
+    <!-- Core css -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="assets/css/app.min.css" rel="stylesheet">
+    <link href="assets/css/reservasi.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div class="app">
+        <div class="layout">
+            <!-- Header START -->
+            <div class="header">
+                <div class="logo logo-dark">
+                    <a href="index.html">
+                        <img src="assets/img/logo/logo-rs.png" alt="Logo">
+                        <img class="logo-fold" src="assets/img/logo/logo-rs.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="logo logo-white">
+                    <a href="index.html">
+                        <img src="assets/img/logo/logo-rs.png" alt="Logo">
+                        <img class="logo-fold" src="assets/img/logo/logo-rs.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="nav-wrap">
+                    <ul class="nav-left">
+                        <li class="desktop-toggle">
+                            <a href="javascript:void(0);">
+                                <i class="anticon"></i>
+                            </a>
+                        </li>
+                        <li class="mobile-toggle">
+                            <a href="javascript:void(0);">
+                                <i class="anticon"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#search-drawer">
+                                <i class="anticon anticon-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav-right">
+                        <li class="dropdown dropdown-animated scale-left">
+                            <a href="javascript:void(0);" data-toggle="dropdown">
+                                <i class="anticon anticon-bell notification-badge"></i>
+                            </a>
+                            <div class="dropdown-menu pop-notification">
+                                <div class="p-v-15 p-h-25 border-bottom d-flex justify-content-between align-items-center">
+                                    <p class="text-dark font-weight-semibold m-b-0">
+                                        <i class="anticon anticon-bell"></i>
+                                        <span class="m-l-10">Notification</span>
+                                    </p>
+                                    <a class="btn-sm btn-default btn" href="javascript:void(0);">
+                                        <small>View All</small>
+                                    </a>
+                                </div>
+                                <div class="relative">
+                                    <div class="overflow-y-auto relative scrollable" style="max-height: 300px">
+                                        <a href="javascript:void(0);" class="dropdown-item d-block p-15 border-bottom">
+                                            <div class="d-flex">
+                                                <div class="avatar avatar-blue avatar-icon">
+                                                    <i class="anticon anticon-mail"></i>
+                                                </div>
+                                                <div class="m-l-15">
+                                                    <p class="m-b-0 text-dark">You received a new message</p>
+                                                    <p class="m-b-0"><small>8 min ago</small></p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0);" class="dropdown-item d-block p-15 border-bottom">
+                                            <div class="d-flex">
+                                                <div class="avatar avatar-cyan avatar-icon">
+                                                    <i class="anticon anticon-user-add"></i>
+                                                </div>
+                                                <div class="m-l-15">
+                                                    <p class="m-b-0 text-dark">New user registered</p>
+                                                    <p class="m-b-0"><small>7 hours ago</small></p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0);" class="dropdown-item d-block p-15 border-bottom">
+                                            <div class="d-flex">
+                                                <div class="avatar avatar-red avatar-icon">
+                                                    <i class="anticon anticon-user-add"></i>
+                                                </div>
+                                                <div class="m-l-15">
+                                                    <p class="m-b-0 text-dark">System Alert</p>
+                                                    <p class="m-b-0"><small>8 hours ago</small></p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0);" class="dropdown-item d-block p-15 ">
+                                            <div class="d-flex">
+                                                <div class="avatar avatar-gold avatar-icon">
+                                                    <i class="anticon anticon-user-add"></i>
+                                                </div>
+                                                <div class="m-l-15">
+                                                    <p class="m-b-0 text-dark">You have a new update</p>
+                                                    <p class="m-b-0"><small>2 days ago</small></p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown dropdown-animated scale-left">
+                            <div class="pointer" data-toggle="dropdown">
+                                <div class="avatar avatar-image  m-h-10 m-r-15">
+                                    <img src="assets/images/avatars/thumb-3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="p-b-15 p-t-20 dropdown-menu pop-profile">
+                                <div class="p-h-20 p-b-15 m-b-10 border-bottom">
+                                    <div class="d-flex m-r-50">
+                                        <div class="avatar avatar-lg avatar-image">
+                                            <img src="assets/images/avatars/thumb-3.jpg" alt="">
+                                        </div>
+                                        <div class="m-l-10">
+                                            <p class="m-b-0 text-dark font-weight-semibold"><?php echo $username; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="profile.php" class="dropdown-item d-block p-h-15 p-v-10">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <i class="anticon opacity-04 font-size-16 anticon-user"></i>
+                                            <span class="m-l-10">Edit Profile</span>
+                                        </div>
+                                        <i class="anticon font-size-10 anticon-right"></i>
+                                    </div>
+                                </a>
+                                <a href="setting.php" class="dropdown-item d-block p-h-15 p-v-10">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <i class="anticon opacity-04 font-size-16 anticon-lock"></i>
+                                            <span class="m-l-10">Ganti Password</span>
+                                        </div>
+                                        <i class="anticon font-size-10 anticon-right"></i>
+                                    </div>
+                                </a>
+                                <a href="loqout.php" class="dropdown-item d-block p-h-15 p-v-10">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <i class="anticon opacity-04 font-size-16 anticon-logout"></i>
+                                            <span class="m-l-10">Logout</span>
+                                        </div>
+                                        <i class="anticon font-size-10 anticon-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Header END -->
+
+            <!-- Side Nav START -->
+            <div class="side-nav">
+                <div class="side-nav-inner">
+                    <ul class="side-nav-menu scrollable">
+                        <li class="nav-item dropdown open">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="anticon anticon-dashboard"></i>
+                                </span>
+                                <span class="title">Dashboard</span>
+                                <span class="arrow">
+                                    <i class="arrow-icon"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="active">
+                                    <a href="/../auth/home.php">Default</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="anticon anticon-appstore"></i>
+                                </span>
+                                <span class="title">Reservasi</span>
+                                <span class="arrow">
+                                    <i class="arrow-icon"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="app-chat.html">Konsultasi</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="anticon anticon-build"></i>
+                                </span>
+                                <span class="title">Informasi</span>
+                                <span class="arrow">
+                                    <i class="arrow-icon"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="avatar.html">Layanan</a>
+                                </li>
+                                <li>
+                                    <a href="alert.html">Cara Penggunaan</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="anticon anticon-hdd"></i>
+                                </span>
+                                <span class="title">E-RESEP</span>
+                                <span class="arrow">
+                                    <i class="arrow-icon"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="accordion.html">E-Resep</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="anticon anticon-form"></i>
+                                </span>
+                                <span class="title">Riwayat</span>
+                                <span class="arrow">
+                                    <i class="arrow-icon"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="form-elements.html">Konsultasi</a>
+                                </li>
+                                <li>
+                                    <a href="form-layouts.html">Transaksi</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Side Nav END -->
+
+            <!-- Page Container START -->
+            <div class="page-container">
+
+
+                <!-- Content Wrapper START -->
+                <div class="main-content">
+                    <div class="page-header no-gutters has-tab">
+                        <h2 class="font-weight-normal">Reservasi</h2>
+                        <p class="font-weight-normal"> Silahkan Memilih Poli, Jadwal dan durasi beserta Platfrom konsultasi</p>
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tab-account">Reservasi</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container">
+                        <div class="tab-content m-t-15">
+                            <div class="tab-pane fade show active" name="tab-account">
+                                <!-- <?php
+                                        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                                            echo '<div class="alert alert-' . $error_type . '" role="alert">';
+                                            echo $error_log;
+                                            echo '</div>';
+                                        }
+                                        ?> -->
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Reservasi Konsultasi</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <form method="POST">
+                                            <div class="row">
+                                                <div class="col-lg-5 col-md-6 mb-3">
+                                                    <label class="font-weight-semibold" for="jenis_kelamin">Pilih Poli</label>
+                                                    <select name="jenis_kelamin" class="form-control">
+                                                        <option>Pilih</option>
+                                                        <option value="Laki-Laki">Poli Umum</option>
+                                                        <option value="Perempuan">Poli khusus</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-5 col-md-6 mb-3">
+                                                    <label class="font-weight-semibold" for="jenis_kelamin">Pilih Durasi</label>
+                                                    <select name="jenis_kelamin" class="form-control">
+                                                        <option>Pilih</option>
+                                                        <option value="Laki-Laki">10 menit</option>
+                                                        <option value="Perempuan">20 menit</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-5">
+                                                    <label class="font-weight-semibold" for="tgl_lahir">Tanggal Konsultasi</label>
+                                                    <input type="date" name="tgl_lahir" class="form-control" placeholder="Tanggal Lahir">
+                                                </div>
+                                                <div class="form-group col-md-5">
+                                                    <label class="font-weight-semibold" for="jenis_kelamin">Pilih Waktu</label>
+                                                    <select name="jenis_kelamin" class="form-control">
+                                                        <option>Pilih</option>
+                                                        <option value="Laki-Laki">08.00-11.00</option>
+                                                        <option value="Perempuan">13.00-15.00</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- Fitur dokter -->
+                                            <section id="fitur" class="overflow-hidden">
+                                                <div class="container">
+                                                    <div class="row d-flex justify-content-between">
+                                                        <div class="col-md-9 me-auto">
+                                                            <h5 class="text-md-start text-center">Fitur pilih dokter</h5>
+                                                        </div>
+                                                        <div class="col-md-3 text-end">
+                                                            <button class="button-fitur">Lihat Semua
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="container mt-5 position-relative">
+                                                    <div class="row">
+                                                        <div class="col-9 d-flex justify-content-start">
+                                                            <div class="position-relative card-fitur">
+                                                                <img src="assets/images/anggun.png" alt="">
+                                                                <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100 ">
+                                                                    <div class="w-100 fitur-detail text-center position-absolute top-50 start-50 translate-middle">
+                                                                        <h5>dr. Anggun</h5>
+                                                                        <span>Poli Umum</span>
+                                                                        <h6>R. 20.000</h6>
+                                                                        <button>Detail</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="mx-3">
+                                                                <div class="position-relative card-fitur">
+                                                                    <img src="assets/images/zaky.png" alt="">
+                                                                    <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100 ">
+                                                                        <div class="w-100 fitur-detail text-center position-absolute top-50 start-50 translate-middle">
+                                                                            <h5>dr. Zaky</h5>
+                                                                            <span>Spesialsi dokter mata</span>
+                                                                            <h6>Rp. 50.000</h6>
+                                                                            <button>Detail</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="mx-3">
+                                                                <div class="position-relative card-fitur">
+                                                                    <img src="assets/images/kiki.png" alt="">
+                                                                    <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100 ">
+                                                                        <div class="w-100 fitur-detail text-center position-absolute top-50 start-50 translate-middle">
+                                                                            <h5>dr. Kiki</h5>
+                                                                            <span>Spesialsi dokter gigi</span>
+                                                                            <h6>Rp. 30.000</h6>
+                                                                            <button>Detail</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="button-arrow-left position-absolute start-0 top-50 translate-middle-y"><img src="assets/Left Arrow lg.png" alt=""></button>
+                                                    <button class="button-arrow-right position-absolute end-0 top-50 translate-middle-y"><img src="assets/Right Arrow lg.png" alt=""></button>
+                                                </div>
+                                            </section>
+                                            <!-- End Fitur pilih dokter -->
+                                            <div class="form-group col-md-5 justify-content-center">
+                                                <label class="font-weight-semibold" for="jenis_kelamin">Pilih platform</label>
+                                                <select name="jenis_kelamin" class="form-control">
+                                                    <option>Pilih</option>
+                                                    <option value="Laki-Laki">whatsap</option>
+                                                    <option value="Perempuan">zoom</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <button type="submit" name="update_profile" class="btn btn-primary m-t-30">Lanjut Pembayaran</button>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Content Wrapper END -->
+
+                    <!-- Footer START -->
+                    <footer class="footer">
+                        <div class="footer-content">
+                            <p class="m-b-0">Copyright © 2019 Theme_Nate. All rights reserved.</p>
+                            <span>
+                                <a href="" class="text-gray m-r-15">Term &amp; Conditions</a>
+                                <a href="" class="text-gray">Privacy &amp; Policy</a>
+                            </span>
+                        </div>
+                    </footer>
+                    <!-- Footer END -->
+
+                </div>
+                <!-- Page Container END -->
+
+                <!-- Core Vendors JS -->
+                <script src="assets/js/vendors.min.js"></script>
+
+                <!-- page js -->
+
+                <!-- Core JS -->
+                <script src="assets/js/app.min.js"></script>
+
+</body>
+
+</html>

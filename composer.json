@@ -1,0 +1,6 @@
+{
+    "require": {
+        "duitkupg/duitku-php": "dev-master",
+        "midtrans/midtrans-php": "^2.5"
+    }
+}
