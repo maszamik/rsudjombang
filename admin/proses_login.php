@@ -27,7 +27,7 @@ if($cek > 0){
 		$_SESSION['username'] = $username;
 		$_SESSION['user_level_id'] = "1";
 		// alihkan ke halaman dashboard admin
-		header("location:admin.php");
+		header("location:../admin/admin.php");
 
 		// cek jika user login sebagai member
 	}else 
@@ -36,7 +36,7 @@ if($cek > 0){
 		$_SESSION['username'] = $username;
 		$_SESSION['user_level_id'] = "2";
 		// alihkan ke halaman dashboard member
-		header("location:dokter.php");
+		header("location:../dokter.php");
 	}else{
 
 	if($data['user_level_id']=="3"){
@@ -54,9 +54,9 @@ if($cek > 0){
 
 		// buat session login dan username
 		$_SESSION['username'] = $username;
-		$_SESSION['user_level_id'] = "member";
+		$_SESSION['user_level_id'] = "4";
 		// alihkan ke halaman dashboard admin
-		header("location:home.php");
+		header("location:../pasien/home.php");
 
 		// cek jika user login sebagai member
 	}else 

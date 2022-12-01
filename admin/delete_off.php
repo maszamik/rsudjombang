@@ -10,7 +10,7 @@
     // $sql = "DELETE FROM user WHERE user_id = $id"; 
 
     // sql to update a record
-    $sql = "update `user` set status='1' where user_id='$id'";
+    $sql = "update `user` set status='0' where user_id='$id'";
 
 
 

@@ -116,8 +116,16 @@
                                             <td><?php echo $i; ?></td>
                                             <td><?php echo $row["nama_dokter"]; ?></td>
                                             <td><?php echo $row["nip"]; ?></td>
-                                            <td><?php echo $row["status"]; ?></td>
-                                            <td>
+                                            <?php
+                                                if ($row["status"]=="Aktif"){
+                                                    $status="Aktif";
+                                                    echo "<td><span class='badge badge-success badge-dot m-r-10'></span>".$status."</td>";
+                                                } elseif ($row["status"]=="Tidak Aktif"){
+                                                    $status="Tidak Aktif";
+                                                    echo "<td><span class='badge badge-danger badge-dot m-r-10'></span>".$status."</td>";
+                                                }
+                                                ?>
+                                                <td>
                                                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#hasilkonsul<?php echo $row['user_id'];?>">
                                                     <i class="anticon anticon-edit"></i>
                                                 </button>

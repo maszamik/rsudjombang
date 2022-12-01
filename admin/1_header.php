@@ -10,10 +10,10 @@
 <div class="header">
     <div class="logo logo-dark">
         <a href="admin.php">
-            <img src="assets/img/logo/logo-rs.png" alt="Logo">
-            <img class="logo-fold" src="assets/img/logo/logo-rs.png" alt="Logo">
-        </a>
-    </div>
+            <img src="assets/img/logo/logo-rs.png" alt="Logo" style="max-height: 65px;">
+            <img class="logo-fold" src="assets/img/logo/logo-rs-kecil.png" alt="Logo" style="max-width: 60px; margin: auto;">
+            </a>
+        </div>
     <div class="logo logo-white">
         <a href="admin.php">
             <img src="assets/img/logo/logo-rs.png" alt="Logo">
