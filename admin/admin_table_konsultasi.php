@@ -48,7 +48,6 @@
                     <div class="card">
                         <div class="card-body">
                             <h4>Jadwal Reservasi</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas accumsan lacus vel facilisis volutpat est velit. Arcu odio ut sem nulla pharetra diam sit amet nisl. In fermentum et sollicitudin ac orci phasellus. Viverra accumsan in nisl nisi scelerisque eu. Urna molestie at elementum eu facilisis sed. Tempus egestas sed sed risus. Vel facilisis volutpat est velit egestas. Consectetur adipiscing elit ut aliquam purus sit amet. Sit amet nisl suscipit adipiscing bibendum est. Ut ornare lectus sit amet. Nunc id cursus metus aliquam eleifend mi in nulla posuere. Ante in nibh mauris cursus mattis molestie a iaculis at. Consequat mauris nunc congue nisi vitae suscipit tellus. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi.</p>
                             <div class="m-t-25">
                                 <?php
                                     $result = $conn ->
@@ -85,11 +84,11 @@
                                                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#hasilkonsul<?php echo $row['user_id'];?>">
                                                     <i class="anticon anticon-edit"></i>
                                                 </button>
-                                                <a href='delete_Reservasi.php?id=<?php echo $row['user_id'];?>'>
+                                                <!-- <a href='delete_Reservasi.php?id=<?php echo $row['user_id'];?>'>
                                                     <button type="button" class="btn btn-danger">
                                                         <i class="anticon anticon-delete"></i>
                                                     </button>
-                                                </a>
+                                                </a> -->
 
                                                 <!-- Edit Modal START -->
                                                 <div class="modal fade" id="hasilkonsul<?php echo $row['user_id'];?>" role="dialog" aria-labelledby="hasilkonsulLabel" aria-hidden="true">

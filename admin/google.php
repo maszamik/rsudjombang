@@ -26,7 +26,7 @@ if ($gclient->getAccessToken()) {
 	// Buat query untuk mengecek apakah data user dengan email tersebut sudah ada atau belum
 	// Jika ada, ambil id, username, dan nama dari user tersebut
     // $sql = mysqli_query($conn,"SELECT * FROM user WHERE username='$username' AND password='$password' ");
-	$sql = mysqli_query($conn, "SELECT user_level_id, email, nama_lengkap FROM user WHERE email='".$email."'");
+	$sql = mysqli_query($conn, "SELECT user_level_id, email, nama_lengkap, username FROM user WHERE email='".$email."'");
 	$user = mysqli_fetch_array($sql); // Ambil datanya dari hasil query tadi
 
 	if(empty($user)){ // Jika User dengan email tersebut belum ada
@@ -36,6 +36,7 @@ if ($gclient->getAccessToken()) {
 
 		// Lakukan insert data user baru tanpa password
 		mysqli_query($conn, "INSERT INTO user(username, nama_lengkap, email) VALUES('".$username."', '".$nama."', '".$email."')");
+		mysqli_query($conn, "INSERT INTO user_pasien(user_id, nama_lengkap) VALUES((SELECT user_id FROM user WHERE username = '$username'), '$nama');");
 
 		$id = mysqli_insert_id($conn); // Ambil id user yang baru saja di insert
 	}else{

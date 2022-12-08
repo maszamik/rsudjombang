@@ -56,7 +56,7 @@
                                                 atau login dengan
                                             </div>
                                             <div class="text-center">
-                                                <a href="google.php" class="btn btn-danger"><i class="fa fa-google"></i>  GOOGLE</a>
+                                                <a href="google.php" class="btn btn-danger"><i class="anticon anticon-google"></i>&nbsp;GOOGLE</a>
                                             </div>
                                         </div>
                                     </form>
