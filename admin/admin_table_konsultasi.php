@@ -131,7 +131,9 @@
                                     echo "No result found";
                                     }
                                 ?>
-                            <button onclick="window.print()" type="submit" id="pdf" name="generate_pdf" class="btn btn-primary"><i class="fa fa-pdf" "="" aria-hidden="true"></i>Generate PDF</button>
+                            <form class="form-inline" method="post" action="admin_pdf_test.php">
+                                <button action="admin_pdf_test.php" type="submit" id="pdf" name="generate_pdf" class="btn btn-primary"><i class="fa fa-pdf" aria-hidden="true"></i>Generate PDF</button>
+                            </form>
                             </div>
                         </div>
                     </div>
