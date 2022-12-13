@@ -16,7 +16,7 @@
     function Header()
     {
         // Logo        
-        $this->Image('assets\img\logo\logo-rs.png',10,6,50);
+        $this->Image('..\assets\img\logo\logo-rs.png',10,6,50);
         // Arial bold 15
         $this->SetFont('Arial','B',20);
         // Move to the right

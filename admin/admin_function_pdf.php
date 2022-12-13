@@ -9,7 +9,7 @@
     function Header()
     {
         // Logo
-        $this->Image('logo.png',10,-1,70);
+        $this->Image('..\assets\img\logo\logo-rs.png',10,-1,70);
         $this->SetFont('Arial','B',13);
         // Move to the right
         $this->Cell(80);
