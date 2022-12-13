@@ -16,13 +16,13 @@
     <title>RSUD JOMBANG - Homepage Telemedicine</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/img/logo/RSUD2.png">
+    <link rel="shortcut icon" href="../assets/img/logo/RSUD2.png">
 
     <!-- page css -->
-    <link href="assets/vendors/datatables/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendors/datatables/dataTables.bootstrap.min.css" rel="stylesheet">
 
     <!-- Core css -->
-    <link href="assets/css/app.min.css" rel="stylesheet">
+    <link href="../assets/css/app.min.css" rel="stylesheet">
 
 </head>
 
@@ -208,15 +208,15 @@
 
     
     <!-- Core Vendors JS -->
-    <script src="assets/js/vendors.min.js"></script>
+    <script src="../assets/js/vendors.min.js"></script>
 
     <!-- page js -->
-    <script src="assets/vendors/datatables/jquery.dataTables.min.js"></script>
-    <script src="assets/vendors/datatables/dataTables.bootstrap.min.js"></script>
-    <script src="assets/js/pages/datatables.js"></script>
+    <script src="../assets/vendors/datatables/jquery.dataTables.min.js"></script>
+    <script src="../assets/vendors/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="../assets/js/pages/datatables.js"></script>
 
     <!-- Core JS -->
-    <script src="assets/js/app.min.js"></script>
+    <script src="../assets/js/app.min.js"></script>
 
 </body>
 

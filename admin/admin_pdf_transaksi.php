@@ -1,5 +1,5 @@
 <?php
-    require('assets/fpdf185/fpdf.php');
+    require('../assets/fpdf185/fpdf.php');
     // require('admin_function_pdf.php');
 
     // Database Connection

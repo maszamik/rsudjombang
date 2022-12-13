@@ -215,7 +215,7 @@
                                                         <td>
                                                             <div class="media align-items-center">
                                                                 <div class="avatar avatar-image rounded">
-                                                                    <img src="assets/images/others/thumb-9.jpg" alt="">
+                                                                    <img src="../assets/images/others/thumb-9.jpg" alt="">
                                                                 </div>
                                                                 <div class="m-l-10">
                                                                     <span>Gray Sofa</span>
@@ -239,7 +239,7 @@
                                                         <td>
                                                             <div class="media align-items-center">
                                                                 <div class="avatar avatar-image rounded">
-                                                                    <img src="assets/images/others/thumb-10.jpg" alt="">
+                                                                    <img src="../assets/images/others/thumb-10.jpg" alt="">
                                                                 </div>
                                                                 <div class="m-l-10">
                                                                     <span>Gray Sofa</span>
@@ -263,7 +263,7 @@
                                                         <td>
                                                             <div class="media align-items-center">
                                                                 <div class="avatar avatar-image rounded">
-                                                                    <img src="assets/images/others/thumb-11.jpg" alt="">
+                                                                    <img src="../assets/images/others/thumb-11.jpg" alt="">
                                                                 </div>
                                                                 <div class="m-l-10">
                                                                     <span>Wooden Rhino</span>
@@ -287,7 +287,7 @@
                                                         <td>
                                                             <div class="media align-items-center">
                                                                 <div class="avatar avatar-image rounded">
-                                                                    <img src="assets/images/others/thumb-12.jpg" alt="">
+                                                                    <img src="../assets/images/others/thumb-12.jpg" alt="">
                                                                 </div>
                                                                 <div class="m-l-10">
                                                                     <span>Red Chair</span>
@@ -311,7 +311,7 @@
                                                         <td>
                                                             <div class="media align-items-center">
                                                                 <div class="avatar avatar-image rounded">
-                                                                    <img src="assets/images/others/thumb-13.jpg" alt="">
+                                                                    <img src="../assets/images/others/thumb-13.jpg" alt="">
                                                                 </div>
                                                                 <div class="m-l-10">
                                                                     <span>Wristband</span>

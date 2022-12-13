@@ -1,5 +1,5 @@
 <?php
-    require('assets/fpdf185/fpdf.php');
+    require('../assets/fpdf185/fpdf.php');
     // require('admin_function_pdf.php');
 
     // Database Connection
@@ -41,7 +41,9 @@
     // Select data from MySQL database
     // SELECT * FROM `reservasi` ORDER BY reservasi_id
 
-    $select ="SELECT * FROM reservasi AS r LEFT JOIN user AS u ON r.user_id = u.user_id 
+    $select ="SELECT * FROM reservasi AS r 
+                LEFT JOIN user AS u ON r.user_id = u.user_id
+                LEFT JOIN user_dokter AS d ON r.user_id = d.user_id 
                 LEFT JOIN poli as p ON r.poli_id = p.poli_id";
     $result = $conn->query($select);
     $pdf = new PDF();
@@ -49,6 +51,7 @@
     $pdf->SetFont('Arial','B',10);
     $pdf->Cell(15,10,'No',1);
     $pdf->Cell(70,10,'Nama Lengkap',1);
+    $pdf->Cell(30,10,'Nama Poli',1);
     $pdf->Cell(40,10,'Tgl Reservasi',1);
     $pdf->Cell(60,10,'Status Reservasi',1);
     $pdf->Ln();
@@ -61,6 +64,8 @@
         $count=$count+1;
         $id = $row->reservasi_id;
         $name = $row->nama_lengkap;
+        // $name = $row->nama_dokter;
+        $poli = $row->nama_poli;
         $date = $row->tgl_reservasi;
         $status = $row->status_reservasi;
         // foreach($header as $heading) {
@@ -68,6 +73,7 @@
         //     }
         $pdf->Cell(15,10,$count,1);
         $pdf->Cell(70,10,$name,1);
+        $pdf->Cell(30,10,$poli,1);
         $pdf->Cell(40,10,$date,1);
         $pdf->Cell(60,10,$status,1);
         $pdf->Ln();

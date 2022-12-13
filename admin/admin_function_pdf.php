@@ -1,7 +1,7 @@
 <?php
     //include connection file
     include_once("../koneksi.php");
-    include_once('assets/fpdf185/fpdf.php');
+    include_once('../assets/fpdf185/fpdf.php');
     
     class PDF extends FPDF
     {
