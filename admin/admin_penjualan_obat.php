@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    include '../koneksi.php';
+    // cek apakah yang mengakses halaman ini sudah login
+	if($_SESSION['user_level_id']=="1"){
+        $username = $_SESSION['username'];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,47 +58,44 @@
                                         <tr>
                                             <th>No</th>
                                             <th>ID Reservasi</th>
-                                            <th>ID Resep Obat</th>
+                                            <th>Nama Obat</th>
                                             <th>Nama Pasien</th>
-                                            <th>Nama Poli</th>
-                                            <th>ID Transaksi</th>
-                                            <th>Tanggal Reservasi</th>
-                                            <th>Status Reservasi</th>
-                                            <th>Tiket Konsultasi</th>
-                                            <th>Hasil Konsultasi</th>
+                                            <th>Jumlah Obat</th>
+                                            <th>Total Pembayaran</th>
+                                            <th>Status Bayar</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
                                             include('../koneksi.php');
-                                            $sql = "SELECT * FROM transaksi";
-                                            // -- AS r LEFT JOIN user AS u ON r.user_id = u.user_id LEFT JOIN poli as p ON r.poli_id = p.poli_id";
+                                            $sql = "SELECT * FROM resep_obat AS r
+                                                    LEFT JOIN reservasi AS res ON r.reservasi_id = res.reservasi_id
+                                                    LEFT JOIN obat AS o ON r.obat_id = o.obat_id
+                                                    LEFT JOIN transaksi AS t ON r.transaksi_id = t.transaksi_id
+                                                    LEFT JOIN user as u ON r.user_id = u.user_id";
                                             $num = 0;
                                             $result = $conn->query($sql);
                                             
-                                            if (isset($_POST['delete'])) {
+                                            // if (isset($_POST['delete'])) {
 
-                                                echo $did = $_POST['reservasi_id'];
-                                                $query = $link->prepare( "DELETE FROM reservasi WHERE reservasi_id=?" );
-                                                $query->bind_param( "s", $did );
-                                                $query->execute();
-                                            }
+                                            //     echo $did = $_POST['reservasi_id'];
+                                            //     $query = $link->prepare( "DELETE FROM reservasi WHERE reservasi_id=?" );
+                                            //     $query->bind_param( "s", $did );
+                                            //     $query->execute();
+                                            // }
 
                                             if ($result->num_rows > 0) {
                                             // output data of each row
                                                 while($row = $result->fetch_assoc()) {
-                                                    $num = $num + 1;                                                    					
+                                                    $num = $num + 1;
                                                     echo "<tr><td>" .$num.
                                                         "</td><td>" .$row["reservasi_id"].
-                                                        "</td><td>" . $row["resep_obat_id"] .
-                                                        "</td><td>". $row["nama_lengkap"] .
-                                                        "</td><td>". $row["nama_poli"].
-                                                        "</td><td>" . $row["transaksi_id"] .
-                                                        "</td><td>" . $row["tgl_reservasi"] .
-                                                        "</td><td>". $row["status_reservasi"].
-                                                        "</td><td>" . $row["tiket_konsultasi"] .
-                                                        "</td><td>" . $row["hasil_konsultasi"] .
+                                                        "</td><td>". $row["nama_obat"] .
+                                                        "</td><td>". $row["nama_lengkap"].
+                                                        "</td><td>" . $row["qty_beli"] .
+                                                        "</td><td>". $row["total_bayar"].
+                                                        "</td><td>" . $row["status_bayar"] .
                                                         "</td><td>";
                                                     echo "<button class='btn btn-icon btn-primary'>
                                                             <i class='anticon anticon-plus'></i></button>";
