@@ -36,6 +36,9 @@
                                 <li>
                                     <a href="admin_table_obat.php">List Obat</a>
                                 </li>
+                                <!-- <li>
+                                    <a href="riwayat-transaksi.php">List Transaksi</a>
+                                </li> -->
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -53,7 +56,7 @@
                                     <a href="admin_table_konsultasi.php">Konsultasi</a>
                                 </li>
                                 <li>
-                                    <a href="admin_penjualan_obat.php">Penjualan Obat</a>
+                                    <a href="riwayat-transaksi.php">Penjualan Obat</a>
                                 </li>
                                 <li>
                                     <a href="admin_keuangan.php">Keuangan</a>

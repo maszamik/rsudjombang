@@ -146,31 +146,33 @@
                                                     </button>
                                                 </a> -->
 
+
                                                 <!-- Edit Modal START -->
                                                 <div class="modal fade" id="hasilkonsul<?php echo $row['user_id'];?>" role="dialog" aria-labelledby="hasilkonsulLabel" aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="hasilkonsulLabel">Edit Dokter</h5>
+                                                                <h5 class="modal-title" id="hasilkonsulLabel">Edit User</h5>
                                                                 <button type="button" class="close"
                                                                     data-dismiss="modal" aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                                 </button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <form method="POST" action="update_dokter.php?id=<?php echo $row['user_id']; ?>">
-                                                                    <div class="form-group">
-                                                                        <label for="formGroupExampleInput">Nama Dokter:</label>
-                                                                        <input type="text" class="form-control" value="<?php echo $row['nama_dokter']; ?>" name="nama_dokter">
+                                                            <form method="POST" action="update_dokter.php?id=<?php echo $row['user_id']; ?>">
+                                                                <div class="form-group">
+                                                                    <label for="formGroupExampleInput">Nama Dokter:</label>
+                                                                    <input type="text" class="form-control" value="<?php echo $row['nama_dokter']; ?>" name="nama_dokter">
                                                                     </div>
-                                                                    <div class="form-group">
-                                                                        <label for="formGroupExampleInput">NIP:</label>
-                                                                        <input type="text" class="form-control" value="<?php echo $row['nip']; ?>" name="nip">
+                                                                <div class="form-group">
+                                                                    <label for="formGroupExampleInput">NIP:</label>
+                                                                    <input type="text" class="form-control" value="<?php echo $row['nip']; ?>" name="nip">
                                                                     </div>
-                                                                    <div class="form-group">
-                                                                        <label for="formGroupExampleInput">Status:</label>
-                                                                        <input type="text" class="form-control" value="<?php echo $row['status']; ?>" name="status">
+                                                                <div class="form-group">
+                                                                    <label for="formGroupExampleInput">Status:</label>
+                                                                    <input type="text" class="form-control" value="<?php echo $row['status']; ?>" name="status">
                                                                     </div>
+                                                                </div>
                                                                 <div class="modal-footer">
                                                                     <button class="btn btn-success" type="submit" name="submit">Edit</button>
                                                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -181,6 +183,7 @@
                                                     </div>
                                                 </div>
                                                 <!-- Edit Modal END -->
+
                                             </td>
                                         </tr>
                                         <?php

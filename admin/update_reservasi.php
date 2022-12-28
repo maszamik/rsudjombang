@@ -1,5 +1,5 @@
 <?php
-    include('admin_jadwal_table.php');
+    // include('admin_jadwal_table.php');
     include('../koneksi.php');
     
     // sql to update a record
@@ -17,7 +17,7 @@
     
     if (mysqli_query($conn, $sql)) {
         mysqli_close($conn);
-        header('location:admin_jadwal_table.php');
+        header('location:admin_table_konsultasi.php');
         exit;
     } else {
         echo "Error deleting record";

@@ -1,5 +1,5 @@
 <?php
-    include('admin_table_dokter.php');
+    // include('admin_table_dokter.php');
     include('../koneksi.php');
     //Connect DB
     //Create query based on the ID passed from you table

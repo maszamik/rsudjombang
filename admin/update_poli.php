@@ -1,5 +1,4 @@
 <?php
-    include('admin_table_poli.php');
     include('../koneksi.php');
     //Connect DB
     //Create query based on the ID passed from you table
@@ -9,7 +8,6 @@
 	$id=$_GET['id'];
 	$nama_poli=$_POST['nama_poli'];
     $sql = "update `poli` set nama_poli='$nama_poli'  where poli_id='$id'";
-
     
     if (mysqli_query($conn, $sql)) {
         mysqli_close($conn);

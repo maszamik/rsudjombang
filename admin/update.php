@@ -1,5 +1,5 @@
 <?php
-    include('admin_edit.php');
+    // include('admin_edit.php');
     include('../koneksi.php');
 
     // sql to update a record
@@ -9,7 +9,7 @@
     $nama_lengkap=$_POST['nama_lengkap'];
     $role=$_POST['role'];
 
-    $sql = "update `user` set username='$username', password='$password' , nama_lengkap='$nama_lengkap', role='$role' where user_id='$id'";
+    $sql = "update user set username='$username', password='$password' , nama_lengkap='$nama_lengkap', role='$role' where user_id='$id'";
 
     
     if (mysqli_query($conn, $sql)) {
